@@ -221,7 +221,7 @@ class OnFileChange implements OnFileChangeInterface
     {
         switch ($this->system) {
             case self::USE_SYSTEM_POLLING:
-                if (!isset($this->timers['polling_timer']) || $this->timers['polling_timer'] === null)
+                if (isset($this->timers['polling_timer']) && $this->timers['polling_timer'] !== null)
                     $this->loop->cancelTimer($this->timers['polling_timer']);
                 break;
             case self::USE_SYSTEM_INOTIFY:
