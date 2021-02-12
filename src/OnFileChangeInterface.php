@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace BrunoNatali\Tools\File;
+namespace BrunoNatali\File;
 
 interface OnFileChangeInterface
 {
@@ -54,5 +54,5 @@ interface OnFileChangeInterface
      * @param float $time New polling time
      * @return bool
     */
-    public function setPollingTime(int $time): bool;
+    public function setPollingTime(float $time): bool;
 }

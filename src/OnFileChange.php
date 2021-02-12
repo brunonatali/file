@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace BrunoNatali\Tools\File;
+namespace BrunoNatali\File;
 
 use BrunoNatali\Inotify\Factory as Inotify;
 use BrunoNatali\Tools\OutSystem;
