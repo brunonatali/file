@@ -103,7 +103,7 @@ try {
 }
 ```
 
-### Configuration
+### OFC Configuration
 Configuations are passed in array format on 4th OnFileChange() arg as follows:
 ```php
 $config = [
@@ -126,14 +126,14 @@ $inotifyFilters = [
 ];
 ```
 
-### start()
+### OFC start()
 Used to starts watching file change. Only takes effect when stoped or initialized with 'auto_start' => false.  
 This function dos not return nothing.
 
-### stop()
+### OFC stop()
 Stops file change verification. This function dos not return nothing.
 
-### setPollingTime()
+### OFC setPollingTime()
 Configure polling time when using this method.
 ```php
 /**
@@ -143,7 +143,7 @@ Configure polling time when using this method.
 $onFileChange->setPollingTime(10.0);
 ```
 
-### static isFileChanged()
+### OFC static isFileChanged()
 You can manually check file changes by calling isFileChanged(). This function is provided statically to could be called by hand
 ```php
 $file = '/my/path/to.file';
