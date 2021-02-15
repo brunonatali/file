@@ -185,22 +185,22 @@ $dataArray = [
 /**
  * Comom use
 */
-$jsonArray = \BrunoNatali\File\Json\saveArray('\my\path\to\file.json', $dataArray);
+$jsonArray = \BrunoNatali\File\JsonFile\saveArray('\my\path\to\file.json', $dataArray);
 
 /**
  * Overwrite destiny if exists
 */
-$jsonArray = \BrunoNatali\File\Json\saveArray('\my\path\to\file.json', $dataArray, true);
+$jsonArray = \BrunoNatali\File\JsonFile\saveArray('\my\path\to\file.json', $dataArray, true);
 
 /**
  * Adding paths to search desired write file
 */
-$jsonArray = \BrunoNatali\File\Json\saveArray('file.json', $dataArray, true, '\my\path\one', '\my\path\two');
+$jsonArray = \BrunoNatali\File\JsonFile\saveArray('file.json', $dataArray, true, '\my\path\one', '\my\path\two');
 
 /**
  * Adding flags to PHP JSON function
 */
-$jsonArray = \BrunoNatali\File\Json\saveArray('\my\path\to\file.json', $dataArray, JSON_PRETTY_PRINT | JSON_HEX_TAG);
+$jsonArray = \BrunoNatali\File\JsonFile\saveArray('\my\path\to\file.json', $dataArray, JSON_PRETTY_PRINT | JSON_HEX_TAG);
 ```
 
 ## FileHandler
