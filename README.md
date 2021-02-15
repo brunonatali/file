@@ -7,14 +7,14 @@ Note. Some functions or classes cannot interact with the Windows system, so use 
 **WARNING**: The [OnFileChange](#on-file-change) class needs [reactphp/event-loop](https://github.com/reactphp/event-loop) to work, but it was not added as required in the composer configuration so as not to force the average user to include a library that they will never use, so don't forget to require it when installing your program, if you are going to use this class.
 
 **Table of Contents**
-* [OnFileChange](#on-file-change) 
+* [OnFileChange](#onfilechange) 
     * [Polling example](#polling-example)
     * [Inotify example](#inotify-example)
-    * [Configuration](#ofl-class-config)
-    * [start()](#ofc-start)
-    * [stop()](#ofc-stop)
-    * [setPollingTime()](#ofc-set-polling)
-    * [static isFileChanged()](#ofc-is-file-changed)
+    * [OFC Configuration](#ofc-configuration)
+    * [OFC start()](#ofc-start)
+    * [OFC stop()](#ofc-stop)
+    * [OFC setPollingTime()](#ofc-setpollingtime)
+    * [OFC static isFileChanged()](#ofc-static-isfilechanged)
 * [JsonFile](#json-file)
     * [readAsArray()](#json-read)
     * [saveArray()](#json-save)
@@ -163,13 +163,13 @@ This class is available with static functions for easy interaction, with the obj
 Reads entire json file as array. This function is meant to be a function to simplify use of native PHP functions file_get_contents() and json_decode(), adding some validations.  
 Simple call:
 ```php
-$jsonArray = \BrunoNatali\File\Json\readAsArray('\my\path\to\file.json');
+$jsonArray = \BrunoNatali\File\JsonFile\readAsArray('\my\path\to\file.json');
 
 /**
  * You can add paths to search desired file.
  * Than file will be searched in every provided paths and than readed
 */
-$anotherJsonArray = \BrunoNatali\File\Json\readAsArray('file.json', '\my\path\one', '\my\path\two');
+$anotherJsonArray = \BrunoNatali\File\JsonFile\readAsArray('file.json', '\my\path\one', '\my\path\two');
 }
 ```
 
